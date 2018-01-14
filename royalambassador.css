@@ -1,0 +1,619 @@
+html, body						                {padding: 0px; margin: 0 0 0 3em;
+                                      background: #f5f5f5;}
+body, p, div, td, span				        {font-size: 12px; font-family: "Verdana", "Georgia"; 
+                                      color: #3A3A3A;  } 
+/********************** Main Layout ********************/
+div.page_div				                  {min-height: 400px; padding-top: 1em;}
+/********************** Header ********************/
+#main_content                         {min-height: 400px;}
+div#main_header span#login_join	      {float: right;}
+img								                    {border: 0;}
+
+div#top_menu						              {float: right; font-size: larger;  padding-top: 6px;}
+.card                                 {background: none repeat scroll 0 0 #fff; border: 1px solid #dbdbdb; 
+                                      box-shadow: 0 1px 1px 0 rgba(50, 50, 50, 0.75);}
+.card > div                           {margin: .4em;}                                      
+.title_bar                            {padding: 1em 1em 1.3em 1em; margin-bottom: .6em;}
+.title_bar .special_action            {margin-bottom: -.1em;}
+.title_bar h1, .title_bar h2          {display: inline;}
+.title_bar h2                         {font-weight: normal;}
+
+/* ******************************** Menu ************************* */
+nav ul ul                             {display: none;}
+nav ul li:hover > ul                  {display: block;}
+nav ul                                {background: #efefef; background: linear-gradient(top, #efefef 0%, #AFAFB0 100%);  
+                                      background: -moz-linear-gradient(top, #efefef 0%, #AFAFB0 100%); 
+                                      background: -webkit-linear-gradient(top, #efefef 0%,#AFAFB0 100%); 
+                                      box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+                                      padding: 0 20px; border-radius: 3px;  list-style: none; 
+                                      position: relative; display: inline-table;}
+nav ul:after                          {content: ""; clear: both; display: block;}
+nav ul li                             {float: left; position: relative; text-align: center;}
+nav ul li:hover                       {background: #4b545f;
+                                      background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
+                                      background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
+                                      background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);}
+nav ul li:hover a                     {color: #fff; text-decoration: none;}
+nav ul li a                           {display: block; padding: 3px 9px; color: #000; text-decoration: none;
+                                      font-weight: bold;}
+nav ul ul                             {background: #5f6975; border-radius: 0px; padding: 0;	
+                                      position: absolute; top: 90%;}
+nav ul li:last-child ul               {right: 0;}
+nav ul ul li                          {float: none; border-top: 1px solid #6b727c; border-bottom: 1px solid #575f6a;
+                                      position: relative; white-space: nowrap; min-width: 144px;}
+nav ul ul li a                        {padding: 6px 9px; color: #fff;}	
+nav ul ul ul                          {position: absolute; left: 100%; top:0;}
+/************************************ End of Menus ***********************************/    
+        
+/* ******************************** Tablet Friendly Menu ************************* */
+
+#nav
+                                      {font-family: "Verdana", "Georgia"; font-size: 12px; color: #3A3A3A;}
+#nav > a                              {display: none;}
+#nav li                               {position: relative;}
+#nav li a                             {color: #fff; display: block;}
+#nav li a:active                      {background-color: #c00 !important;}
+#nav span:after                       {width: 0; height: 0; border: 0.313em solid transparent; /* 5 */ 
+                                      border-bottom: none; border-top-color: #efa585; content: '';
+                                      vertical-align: middle; display: inline-block; position: relative;
+                                      right: -0.313em; /* 5 */}
+
+			                                /* first level */
+
+#nav > ul                             {height: 25px; /* 60 */
+                                      background: -webkit-linear-gradient(top, #efefef 0%,#AFAFB0 100%);
+                                      box-shadow: 0px 0px 9px rgba(0,0,0,0.15); padding: 0 20px; border-radius: 3px;
+                                      list-style: none; position: relative; display: inline-table;
+                                      background-color: #4b545f; list-style: none;}
+#nav > ul > li                        {height: 100%; float: left;}
+#nav > ul > li > a                    {height: 100%; display: block; padding: 6px 9px; color: #000; text-decoration: none;
+                                      font-weight: bold; text-align: center;}
+#nav > ul > li:hover > a, #nav > ul:not( :hover ) > li.active > a
+                                      {background-color: #4b545f; color: white;}
+
+
+				                              /* second level */
+
+#nav li ul                            {background-color: #4b545f; list-style: none; display: none; position: absolute; top: 100%;}
+#nav li:hover ul                      {display: block; min-width: 250px; padding:0; left: 0; right: 0;}
+#nav li:not( :first-child ):hover ul  {left: -1px;}
+#nav li ul a                          {font-family: "Verdana", "Georgia"; font-size: 12px; font-weight: bold;
+                                       text-decoration: none; border-top: 1px solid #4b545f; padding: 0.75em; /* 15 (20) */}
+#nav li ul li a:hover,
+#nav li ul:not( :hover ) li.active a  {background-color: black;}
+
+
+@media only screen and ( max-width: 62.5em ) /* 1000 */
+                                      {#nav {width: 100%; position: static; margin: 0;}}
+
+@media only screen and ( max-width: 40em ) /* 640 */
+                                      {html {font-size: 75%; /* 12 */}
+#nav                                  {position: relative; top: auto; left: auto;}
+#nav > a                              {width: 3.125em; /* 50 */ height: 3.125em; /* 50 */
+                                      text-align: left; text-indent: -9999px; background-color: #4b545f;
+                                      position: relative;}
+#nav > a:before, #nav > a:after
+                                      {position: absolute; border: 2px solid #fff; top: 35%;
+                                      left: 25%; right: 25%; content: '';}
+#nav > a:after                        {top: 60%;}
+
+#nav:not( :target ) > a:first-of-type, #nav:target > a:last-of-type
+                                      {display: block;}
+                                      
+			                                /* first level */
+#nav > ul                             {height: auto; display: none; position: absolute; left: 0; right: 0;}
+#nav:target > ul                      {display: block;}
+#nav > ul > li                        {width: 100%; float: none;}
+#nav > ul > li > a                    {height: auto; text-align: left; padding: 1.25em; /* 20 (24) */}
+#nav > ul > li:not( :last-child ) > a {border-right: none; border-bottom: 1px solid #6b727c;}
+
+
+                                      /* second level */
+#nav li ul                            {position: static; padding: 1.25em; /* 20 */padding-top: 0;}
+                                      }
+
+/************************************ End of Tablet Friendly Menus ***********************************/
+
+/********************************* Tablet Friendly Sidebar Menu **************************************/
+
+/* Main sidebar container */
+#sidebar ul                           {list-style: none; margin: 0; padding: 0; vertical-align: baseline;}
+#sidebar h1                           {margin-top: 0; color: #4D4D4D;}
+
+#sidebar h1                           {font-size: 21px; margin-bottom: 6px;}
+#sidebar                              {position: absolute; top: 0; left: 0; width: 54px; height: 100%;
+                                      padding-top: 0; z-index: 100; 
+                                      font-family: "Open Sans", "sans-serif";}
+
+/* Logo + hover effects */
+#sidebar img                          {width: 80%; padding: 5% 10% 2% 10%;
+                                       transition: all .15s ease-in-out;}
+
+#sidebar img:hover                    {/* This hover also applies to menu level 0 icons */
+                                       background: #616161;}
+
+/* Level 0 items (icons) */
+#sidebar > ul > li                    {/* This sets the height of each menu list item; 
+                                       transition property goes in the trigger instead of the target, 
+                                       otherwise fade-out animations don't happen */
+                                       transition: all .25s ease-in-out;}
+
+#sidebar li:hover, .cur_module        {/* Hover on the LI instead of the IMG; 
+                                       if hover is on IMG it disappears when mousover relead menu */
+                                       background: #616161;}
+
+#sidebar li:hover > ul                {/* Target UL on hover */ visibility: visible; opacity: 1;}
+
+#sidebar li img:hover                 {/* This hover also applies to menu level 0 icons */
+                                       background: none;}
+
+/* Level 1 items (sub-menu) */
+#sidebar li ul                        {/* Styling the sub list. Position: absolute is IMPORTANT here */
+                                       box-sizing: Border-box; position: absolute; margin-left: 54px;
+                                       margin-top: -55.5px; width: 250px; background-color: #424242;
+                                       visibility: hidden; opacity: 0; transition: all .25s ease-in-out;
+                                       box-shadow: 4px 4px 5px 0 rgba(50, 50, 50, 0.4);
+                                       border-bottom: 7px solid #616161; z-index: 100;}
+
+/* Level 1 title styling (rotated banner) */
+#sidebar ul ul h1                     {/* Rotated banner gets its own h1 definition */
+                                       box-sizing: Border-box; position: absolute;
+                                       background: rgba(255, 255, 255, 0.5); width: 300px; margin-left: 120px;
+                                       margin-top: 155px; transform: rotate(90deg);
+                                       -webkit-backface-visibility: hidden; font-size: 1.3em; font-weight: 400;
+                                       color: #000; text-align: left; text-transform: uppercase;}
+
+/* Level 1 input box & icon styling */
+#sidebar .menu_header                 {/* Can't be targeted nicely with cascade, needs its own class :sigh: */
+                                       background: #616161; height: 51px; padding: 0 0 4px 6px;}
+
+#sidebar .menu_header:hover           {/* Don't want the orange hover on this one */
+                                       background: #616161;}
+
+#sidebar input                        {/* Styles the search input box; 
+                                       only 1 level of input boxes so I don't bother precisely targeting*/
+                                       width: 170px; height: 30px; margin-top: 12px; margin-left: 10px;
+                                       font-weight: 400; border: 0; padding-left: 0.5em;}
+
+#sidebar li li img,
+#btn_launch_qsearch                   {/* Float right for proper inlining; this means that we have to position 
+                                       from the right as well */
+                                       width: 30px; margin: 14px 15px 0 0; padding: 0; cursor: pointer; float: right;}
+
+#sidebar li li img:hover              {background: none;}
+
+/* Level 1 list item styling */
+#sidebar li li                        {/* List items; slightly lighter transition here */
+                                       font-size: 0.9em; font-weight: 200; padding-left: 20px; height: 36px;
+                                       line-height: 36px; color: #fff; transition: all .10s ease-in-out;
+                                       text-align: left;}
+
+#sidebar li li:hover                  {background: #FB8C00;}
+
+/* Level 1 Link Styling */
+#sidebar a:link,
+#sidebar a:visited,
+#sidebar a:active,
+#sidebar a:hover                      {text-decoration: none; color: #fff; font-weight: 200; font-size: 1.1em;}
+
+/* Level 2 items (sub-sub-menu) */
+#sidebar li li ul                     {/* Some fine adjustments for the menu positioning */
+                                       margin-left: 230px; margin-top: -36px;}
+
+#sidebar li li li                     {/* List items; font size has to be applied here 
+                                       otherwise the menus will cascade smaller and smaller 
+                                       as the 0.9em is applied again and again (or larger as the case may be) */
+                                       font-size: 1em;}
+
+/****************************** End of Side Nav ****************************/
+
+#sidebar > a                          {display: none;}
+    
+@media only screen and ( max-width: 62.5em ) /* 1000 */
+		                                  {
+#sidebar                              {position: absolute; top: 0; left: 0; width: 54px;
+                                       height: 100%; background: #424242;
+                                       box-shadow: 3px 0 5px 0 rgba(50, 50, 50, 0.4); padding-top: 0;
+                                       z-index: 100; font-family: "Open Sans", "sans-serif";}
+		
+/* Logo + hover effects */
+#sidebar img                          {width: 80%; padding: 20% 10%; margin-bottom: 20px;
+                                       transition: all .15s ease-in-out;}
+
+#sidebar img:hover                    {/* This hover also applies to menu level 0 icons */
+                                       background: #616161;}
+
+#sidebar li img                       {/* This sets the size & position of the image */
+                                       width: 60%; padding: 20%; margin-bottom: 0;}
+    
+#sidebar li img:hover                 {/* This hover also applies to menu level 0 icons */
+                                       background: none;}
+    
+#sidebar li li img,
+#btn_launch_qsearch                   {/* Float right for proper inlining; 
+                                       this means that we have to position from the right as well */
+                                       width: 30px; margin: 14px 15px 0 0; padding: 0; cursor: pointer;
+                                       float: right;}
+
+#sidebar li li img:hover              {background: none;}
+    
+    
+                                      }
+
+@media only screen and ( max-width: 40em ) /* 640 */
+		                                  {
+#sidebar > a                          {width: 3.125em; /* 50 */ height: 3.125em; /* 50 */ text-align: left;
+					                             text-indent: -9999px; background-color: #424242; position: relative;}
+#sidebar > a:before,
+#sidebar > a:after                    {position: absolute; border: 2px solid #fff; top: 35%; left: 25%;
+						                           right: 25%; content: '';}
+#sidebar > a:after                    {top: 60%;}
+
+#sidebar:not( :target ) > a:first-of-type,
+#sidebar:target > a:last-of-type
+				                              {display: block;}
+
+
+/* first level */
+
+#sidebar > ul                         {/* height: auto; */ display: none; position: absolute; left: 0; right: 0;}
+#sidebar:target > ul                  {display: block;}
+#sidebar > ul > li                    {width: 100%; float: none;}
+#sidebar > ul > li > a                {/* height: auto; */ text-align: left; padding: 0; /* 20 (24) */ margin: 0;}
+#sidebar > ul > li:not( :last-child ) > a
+						                          {border-right: none; padding:0; margin:0;}
+
+/* second level */
+
+#sidebar li ul                        {position: absolute;padding: 1.25em; /* 20 */ padding-top: 0;}
+		                                  }
+/********************************* Tablet Friendly Sidebar Menu **************************************/
+
+/************************************ Context Menus **********************************/
+nav.context                           {position: absolute; top: 3px; right: 3px; 
+                                      background: none; font-size: 12px;}
+nav.context li:first-child:hover      {background: none;}
+nav.context > ul                      {margin: 0; padding: 0; background: none;}
+nav.context > ul > li > ul            {background: #686868;}
+nav.context input                     {display: block; background: none; cursor: pointer; font-weight: bold; 
+                                      height: 30px; margin: 0; padding: 8px 15px; text-align: right; 
+                                      width: 100%; border-bottom: 1px solid #888;}
+nav.context input:hover               {background-color: #555; cursor: pointer; background: none; 
+                                      z-index: 101;}
+nav.context input:last-child          {border: none; }
+nav.context a, .page_div .ui-widget-content nav.context a                     
+                                      {display: block; padding: 8px 15px; text-decoration: none;
+                                      border-bottom: 1px solid #888; color: #FFF; float: none;
+                                      font-weight: bold;}
+nav.context ul li img                 {height: 21px; }    
+nav.context a img                     {height: 15px; margin: 0 6px -6px 0;}
+nav.context a:hover                   {text-decoration: none; background-color: #555; color: #FFF;}
+nav.context li:hover                  {z-index: 101;}
+/************************************ End of Context Menus ***********************************/                                  
+
+#top_toolbar                        {float: right; height: 45px; margin: 1em;}
+#top_toolbar a                      {float: left; margin-left: 3px; text-decoration: none;}
+.top_toolbar                        {width: 46px; height: 38px; text-align: center; padding-top: 8px;
+                                    font-weight: bold;} 
+#icon_top_tentative                 {background: url('/images/toolbar_tentative_events.png') no-repeat;
+                                    font-size: 1.8em;}
+#icon_top_pd_deposits               {color: #FFF;background: #EA0804; padding: 3px 0; font-size: 1.4em;}
+#icon_top_calendar                  {background: url('/images/toolbar_calendar.png') no-repeat ;
+                                    width: 46px;}                       
+p#top_cal_month                     {font-size: .8em; font-weight: bold; padding: 6px 0 0 3px; 
+                                    color: #fff;}
+p#top_cal_day                       {font-size: 2em; font-weight: bold;
+                                    margin-top: -16px; text-align: center;}
+/****************** Tablet Friendly Top ToolBar **************************************************
+ ************* (Transferred to the side menu as a clickable Tool picture above [HOME]) *************/                                    
+.onclick_menu                       {position: absolute; left: 15px; top: 115px; display: inline-block;
+                                     margin: 0; width: 50px; height: 50px; padding: 0; z-index: 500;}
+.onclick_menu:before                {background: url('/images/3d-question-mark50.png');  background-repeat: no-repeat;
+                                     display: block; width:50px; height:50px; margin: 0; padding:0; float: left; 
+                                     top: 0%;content:' ';}
+.onclick_menu:focus                 {/* clicking on label should toggle the menu */
+                                     pointer-events: none;}
+.onclick_menu:focus 
+.onclick_menu_content               {/*  opacity is 1 in opened state (see below) */
+                                     opacity: 1; visibility: visible;
+                                     /* don't let pointer-events affect descendant elements */
+                                     pointer-events: auto;}
+.onclick_menu_content               {padding:10px 10px 0 0; width:390px; background-color:#f5f5f5; 
+                                     z-index: 500; border: 1px solid black; box-shadow: 2px 2px 5px #888888;
+                                     /* use opacity to fake immediate toggle */
+                                     opacity: 0; visibility: hidden; transition: visibility 0.5s;}
+.onclick_menu_content               {list-style: none; display: inline-table; margin-top: -100px; margin-left: 80px;}
+.onclick_menu_content li            {padding:0; display: inline-table; float: right; margin-left: 0.8em;}                                   
+/****************** End of Tablet Friendly Top ToolBar *******************/                                 
+                                    
+div#submenu						              {clear: right;}
+div#submenu span					          {float: right; width: 120px; margin-left: 3px; 
+                                    text-align: center; padding: 6px; margin-bottom: 3px;
+                                    margin-top: 3px; background: #376827;}
+div#submenu span a					        {color: #CFDCA7; text-decoration: none;}
+hr#top_divider					            {clear: both;}
+/****************** Footer *******************/
+div#main_footer					            {clear: both; padding-top: 0.5mm; text-align: center;}
+p#copy_right					              {color: #666666; font-size: smaller; margin-top: 2px;}
+div#main_footer span.divider		    {color: #666666; padding-left: 5px; padding-right: 5px;}	
+/****************** Back to Top button *******************/
+button                              {padding: 0; margin:0;}
+#myBtn                              {display: none; position: fixed; bottom: 20px; right: 30px; z-index: 99;
+                                    border: none; outline: none; background-color: #4b545f; color: white;
+                                    cursor: pointer; padding-top: 15px; padding-bottom: 15px; border-radius: 10px;}
+#myBtn:hover                        {background-color: red;}
+/**************** Main Navigation  *************/
+div#side_nav						            {width: 200px; height: 540px; float: left;}
+div#side_nav img					          {border: 0; float: left;}
+/**************** General *************/
+h1, h2, h3, h4		                  {margin-top: 0; color: #99001E;}
+h1 							                    {font-size: 17px; margin-bottom: 6px;}
+h2							                    {font-size: 15px; margin-bottom: 3px;}
+h3 							                    {font-size: 13px; margin-bottom: 2px;}
+h4							                    {font-size: 12px; margin-bottom: 1px;}
+a, .page_div .ui-widget-content a   {color: #E56542; text-decoration: underline;}
+a:hover, .page_div .ui-widget-content a:hover
+                                    {color: #9E0F29; text-decoration: none;}
+p								                    {margin-bottom: 6px; margin-top: 0px; line-height: 160%;}
+div.line_break		                  {clear: both; height: 6px;}
+div.right_break	                    {clear: right; height: 6px;}
+div.left_break		                  {clear: left; height: 6px;}
+.h_sep                              {height: 6px; width: 98%; margin: 9px 0 9px 0; clear: both;
+                                    border-bottom: 1px dashed #999;}
+.bound .h_sep                       {height: 2px; width: 100%; margin: 0;}                  
+.bound tr.actual_body:hover         {background: #E2D9B5;}
+.hasDatepicker                      {width: 6.5em;}
+input[type="text"], input[type="password"], textarea
+                                    {border: 1px solid #666666;}
+input[type="submit"], button, .special_action		
+                                    {color: #fff; padding: 3px; border: 0; margin: 3px;
+                                    border-radius: 6px; min-width: 60px; font-weight: bold;
+                                    background: #c5d0d8; /* Old browsers */
+                                    background: -moz-linear-gradient(top,  #c5d0d8 0%, #1f2265 100%); /* FF3.6+ */
+                                    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c5d0d8), color-stop(100%,#1f2265)); /* Chrome,Safari4+ */
+                                    background: -webkit-linear-gradient(top,  #c5d0d8 0%,#1f2265 100%); /* Chrome10+,Safari5.1+ */
+                                    background: -o-linear-gradient(top,  #c5d0d8 0%,#1f2265 100%); /* Opera 11.10+ */
+                                    background: -ms-linear-gradient(top,  #c5d0d8 0%,#1f2265 100%); /* IE10+ */
+                                    background: linear-gradient(top,  #c5d0d8 0%,#1f2265 100%); /* W3C */
+                                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5d0d8', endColorstr='#1f2265',GradientType=0 ); /* IE6-9 */
+                                    }
+.special_action		                  {margin: 6px; text-align: center; padding: 2px 9px 4px 9px; display: inline;}
+.special_action	a, .page_div .ui-widget-content .special_action a  	
+                                    {color: #FFF; font-weight: bold; text-decoration: none;} 
+input[type="submit"]:hover, button:hover, .special_action:hover		
+                                    {text-decoration: none; background: #303644;}                          
+button:hover span                   {color: #fff;}                          
+label							                  {color: #3A3A3A; font-weight: bold; padding-right: 5px;}
+.filter_group                       {padding: 6px 4px ; margin: 6px; border: 1px dotted #999;}
+.group_label                        {background: #F9F0B8; padding: 3px; margin-right: 3px; 
+                                    font-weight: bold;}
+.round_box_6px, fieldset            {border-radius: 6px; -moz-border-radius: 6px; 
+                                    -webkit-border-radius: 6px; padding: 6px; 
+                                    border: 1px solid #999; background: #FCFCFC;}
+.round_box_3px                      {border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+                                    padding: 3px; border: 1px solid #999; background: #FCFCFC;}
+.top_round_6px                      {border-top-right-radius: 6px; 
+                                    -moz-border-top-right-radius: 6px; 
+                                    -webkit-border-top-right-radius: 6px;
+                                    border-top-left-radius: 6px; 
+                                    -moz-border-top-left-radius: 6px; 
+                                    -webkit-border-top-left-radius: 6px;                  
+                                    padding: 6px 0; border: 1px solid #999;}
+.bottom_round_6px                   {border-bottom-right-radius: 6px; 
+                                    -moz-border-bottom-right-radius: 6px; 
+                                    -webkit-border-bottom-right-radius: 6px;
+                                    border-bottom-left-radius: 6px; 
+                                    -moz-border-bottom-left-radius: 6px; 
+                                    -webkit-border-bottom-left-radius: 6px;
+                                    padding: 0; border: 1px solid #999;}
+legend                              {font-weight: bold; padding: 3px; color: #7C6725;}                 
+#ajax_obj label                     {color: #3A3A3A; font-weight: bold; padding-right: 5px;
+                                    float: left; min-width: 125px; text-align: right;}
+#show_records                       {margin-top: 3px;}                     
+/************** Page Specific Formatting **************/
+/* All Pages */
+span.element			                    {float: left;}
+.hint                                 {font-size: smaller;} 
+div.page_div label					          {text-align: right; float: left; width: 160px;}
+div.page_div .page_nav			          {width: 100%; text-align: center; margin-top: 16px;}
+div.page_div .form_header input[type="submit"], 
+div.page_div .form_footer input[type="submit"]
+                                      {margin-left: 6px ;}
+.page_div .form_filters	label		      {width: auto; float: none; padding-right: 2px;}
+.page_div .form_filters	input	, .page_div .form_filters select	
+                                      {margin-left: 5px; float: none;}								
+table.bound					                  {width: 100% ;}
+table.bound th			                  {background: #C5B469;
+                                       padding-top: 6px; padding-bottom: 6px; 
+                                       padding-left: 3px; padding-right: 3px;
+                                       color: #fff;}
+table.bound th a			                {color: #fff;}
+.even			                            {background: #E5D07B;}
+table.bound tr.total	                {font-weight: bold; background: #F2E8C6;}
+table.bound tr.total td		            {padding: 3px;}
+.number, .ralign		                  {text-align: right; padding-right: 3px;}
+.calign		                            {text-align: center;}
+
+table.bound th.id_column              {width: 10px;}
+
+table.bound_2nd				                {width: 100%;}
+table.bound_2nd th				            {background: #D4E1AB; padding: 6px;}
+table.bound_2nd tr.even		            {background: #E5D07B;}
+table.bound_2nd td				            {border: 2px solid #FFF;}
+table.bound_2nd tr.total		          {font-weight: bold; background: #D4F46E;}
+table.bound_2nd tr.total td		        {padding: 3px;}
+table.bound_2nd td.pricing_title	    {width: 70%;}
+table.bound_2nd td.price			        {width: 12%; text-align: right;}
+table.bound_2nd td.tax_group		      {width: 14%;}
+table.bound_2nd td.delete			        {width: 8%;}
+tr.sep_row                            {background: #9D8944;}
+tr.sep_row  td                        {font-weight: bold; color: #fff; padding: 3px;
+                                      font-size: 1.2em;}
+.scr_section				                  {border: 1px solid #000; width: 60%; padding: 12px;}
+div.facility_pricing_2nd		          {border: 0px solid #666; background: #EBFABE; 
+                                      width: 80%; padding: 6px; margin-left: 60px;}
+div.record_count				              {float: right; margin-top: 6px; padding: 6px; }
+div.form_section				              {float: left; margin: 6px; padding: 6px; border: 1px solid #ccc;}
+.show_order                           {float: left; width: 21px; padding: 3px; margin-right: 3px;
+                                      border: 1px solid #CCC;}
+.jeditable, .jedit_help               {border-bottom: 2px dotted #3E8DA7;}
+
+/*page specific */
+div#pg_user_login .form_footer	      {width: 35%;}
+div#pg_event_edit label				        {width: 180px;}
+div#event_contracts label			        {width: auto;}
+div#event_prices span.element		      {float: right;}
+div#dashboard_menu				            {width: 200px; margin: auto;}
+div#dashboard_menu div				        {background: #998B44; padding: 12px; text-align: center; margin-bottom: 3px;}
+div#dashboard_menu div:hover		      {background: #999064;}
+div#dashboard_menu a				          {color: #141213; text-decoration: none; font-size: 13px;
+                                      font-weight: bold;}
+td.cross_tab_cell                     {text-align: right; padding-right: 3px;}
+td.cross_tab_total                    {text-align: right; padding-right: 3px; font-weight: bold;}
+div#reports_menu					            {width: 300px; margin: auto;}
+div#reports_menu div				          {background: #998B44; padding: 12px; text-align: center;
+                                      margin-bottom: 3px; color: #3F391C; font-size: 13px; font-weight: bold;}
+div#reports_menu div:hover			      {background: #999064;}
+div#pg_event_view label				        {width: 120px;}
+div#pg_email_queue_edit .form_footer  {width: 820px; text-align: right;}
+.warning						                  {padding:3px 6px; display: inline-block; background: #DB241E; color: #fff; 
+                                      font-weight: bold;}
+.green						                    {background: #13A021; color: #fff; padding: .1em .5em .2em .5em;
+                                      text-decoration: none;} 
+                                      font-weight: bold;}
+.page_total, .grand_total		          {font-weight: bold;}
+.lbl_page_total, .lbl_grand_total	    {font-weight: bold;}
+td.total                              {font-weight: bold;}
+tr.grand_total td                     {padding: 3px 0 3px 0; border-top: 2px solid #000;
+                                      border-bottom: 2px solid #000;}
+.jedittable						                {color: #E79D0D;}
+.err_msg .ui-dialog-titlebar		      {background: #FF0000;}
+.err_msg .ui-dialog-title		          {color: #FFF; font-weight: bold;}
+.err_msg .ui-dialog-content div.main  {padding-top: 24px; vertical-align: center; height: 100%;}
+.err_msg .ui-dialog-content div.msg, .err_msg .ui-dialog-content img
+                                      {float: left;}
+.err_msg .ui-dialog-content div.msg	  {margin-left: 12px; padding-top: 12px; width: 75%;}
+span.negative                         {color: red;}
+span.positive                         {color: #0A1DBB;}
+div#pg_report_sales_yearly  td ,  div#pg_report_sales_yearly  td  span        
+                                      {font-size: 12px;}
+div#pg_report_sales_yearly  th        {font-size: 13px;}                                                                    
+div.tab_content                       {min-height: 420px;}
+.category_link                        {font-size: 16px; color: #EA2909; font-weight: bold;}
+#refresh_serve_titles:hover           {cursor: pointer}
+div.form_footer a                     {text-decoration: none}
+
+.comm_paid                            {background: #EACD64; padding: 3px; border: 1px solid #666;
+                                      white-space: nowrap;}
+.comm_not_paid                        {background: #FFA3A3; padding: 3px; border: 1px solid #666;
+                                      white-space: nowrap;}
+.right_col                            {width: 42%; float: left; padding-left: 24px;
+                                      border-left: 1px dotted #999;}
+.left_col                             {width: 45%; float: left;}
+.inline_href                          {margin-left: 12px;}
+.no_break                             {white-space: nowrap;}
+.event_booked	                        {background: #8BD3ED;}
+.event_tentative                      {background: #FFFF54;}
+.event_promised                       {background: #0ED62C;}
+.event_cancelled			                {background: #DB7D7D;}
+.event_archived				                {background: #EE1E74; color: #FFF;}
+.event_status	                        {padding: 4px; border: 1px solid #999; border-radius: 6px;
+                                      display: inline-block; width: 70px; text-align: center;}
+.event_type_catering, .event_type_special          
+                                      {padding: 3px 6px; color: #fff; text-align: center;
+                                      border-radius: 6px; float: left; width: 90px;}
+.event_type_catering                  {background: #11C3FF;}
+.event_type_special                   {background: #C90E0E;}
+.event_type_special span              {color: #FFF;}
+.deposit_past_due                     {background: #EA0804; color: #FFF; padding: 3px;}
+.filter_controls                      {float: left; width: 87%;}
+.filter_buttons                       {float: left; width: 12%;}
+.disabled                             {opacity: .3;}
+.page_nav_wrap                        {margin-top: 6px; text-align: center;}
+.page_nav_cell                        {display: inline-block; width: 21px; margin-left: 3px; text-align: center;} 
+.page_nav_cell a                      {text-decoration: none;} 
+.page_nav_wrap  .page_nav_cell:first-child                  
+                                      {margin-left: 0;}
+.page_nav_cell.cur_page               {background: #222; color: #fff;}
+.hlighted                             {background: #A81317; color: #FFF; padding: 1px;}
+table.change_log td, .change_log th   {border: 1px solid #999; padding: 3px; margin: 0;}
+
+/* staff scheduling */
+.sch_work                             {background: #CEEDD7;}
+.sch_off                              {background: #F7DFDE;}
+.sch_full_vacation                    {background: #F7DFDE;}
+.sch_hourly_vacation                  {background: #F7DFDE;}
+.tabs                                 {background: #FCFCFC; margin-left: .5em;}
+.tabs > ul                            {padding: 0; margin: 0;}                                
+.tabs > ul:after                      {clear: both; content: ""; display: table;}
+.tabs > ul > li                       {font-size: 1.3em; width: 10em; float: left; text-align: center;
+                                      padding: .5em; list-style-type: none; margin-right: .4em;
+                                      border: 1px solid #999; border-bottom: 0; 
+                                      /* do not allow text highlighting */
+                                      -webkit-user-select: none;  /* Chrome all / Safari all */
+                                      -moz-user-select: none;     /* Firefox all */
+                                      -ms-user-select: none; user-select: none;}  
+.tabs > ul li.active                  {background: #FFF;}                                
+.tabs > .tab_content                  {background: #FFF; padding: 1.5em; margin-top: -1px;
+                                      border: 1px solid #999;}    
+.tabs > .tab_content > div            {display: none;}    
+#ajax_obj .tabs > ul > li             {font-size: 1.2em; cursor: pointer;}  
+#ajax_obj .tabs > ul > li.active      {color: #A21B21;}  
+.bottom_bar                           {position: fixed; bottom: 0px; background: rgba(209,214,210,0.6); 
+                                      width: 98%;
+                                      border: 1px solid #575C63; border-bottom: 0; text-align: center; 
+                                      border-top-right-radius: 6px; border-top-left-radius: 6px;}
+#xmlb_warn                            {background: #4683ea; color: #fff; padding: .3em;
+                                      position: absolute; top: 3em; left: 50em; font-size: 1.1em;
+                                      min-width: 30em; text-align: center;
+                                      border: 1px solid #999;}
+                                      
+/* Static tabs azarbod tabs*/                                     
+.az_tabs                             {background: #F5F5F5; margin-left: .5em;}
+.az_tabs ul                          {padding: 0; margin: 0;}                                
+.az_tabs ul:after                    {clear: both; content: ""; display: table;}                                
+.az_tabs > ul li                     {font-size: 1.4em; width: 10em; float: left; 
+                                      text-align: center;
+                                      padding: .5em; list-style-type: none; margin-right: .4em;
+                                      border: 1px solid #999; border-bottom: 0;}  
+.az_tabs > ul li.active              {margin-bottom: -1px; border-bottom: 0; background: #FFF;}                                
+.cur_az_tab                          {background: #FFF; padding: 1.5em; margin-top: -1px;
+                                      border: 1px solid #999;}                                  
+/* End of Static tabs azarbod tabs*/                                       
+/* Purchase Order Status */
+.po_status                            {padding: 3px; color: #fff; margin: 3px; display: inline-block; 
+                                      width: 90px; text-align: center;}
+.po_preparation                	      {background: #94CAFC;}
+.po_finalized           	            {background: #9E9E9E;}
+.po_approved           	              {background: #07B70A;}
+.po_sent              	              {background: #07B70A;}
+.po_aborted            	              {background: #000;}
+.po_completed         	              {background: #07B70A;}
+
+.receive_status                       {padding: 3px; color: #fff; margin: 3px; display: inline-block; 
+                                      width: 8em; text-align: center;}
+.not_received                	        {background: #94CAFC;}
+.partial_received           	        {background: #07B70A;}
+.full_received              	        {background: #9E9E9E;}
+.aborted              	              {background: #000; color: #FFF;}
+ 
+.lqc_status_prep	                    {background: #6BFB06;}
+.lqc_status_checkedout                {background: #89C6ED;}
+.lqc_status_being_returned            {background: #1DE6ED;}
+.lqc_status_wrapped_up                {background: #248D2D; color: #FFF;}
+.lqc_status_add_more                  {background: #F2D013;}
+.lqc_status	                          {padding: 4px; border: 1px solid #999; border-radius: 6px;
+                                      display: inline-block; min-width: 70px; text-align: center;}
+ 
+.button a                             {display: inline-block; color: #fff; padding: 0.5em; border: .1em solid; margin: .5em;text-align: center;
+                                      border-radius: 6px; min-width: 90px; font-weight: bold;
+                                      background: #c5d0d8; /* Old browsers */
+                                      background: -moz-linear-gradient(top,  #c5d0d8 0%, #1f2265 100%); /* FF3.6+ */
+                                      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c5d0d8), color-stop(100%,#1f2265)); /* Chrome,Safari4+ */
+                                      background: -webkit-linear-gradient(top,  #c5d0d8 0%,#1f2265 100%); /* Chrome10+,Safari5.1+ */
+                                      background: -o-linear-gradient(top,  #c5d0d8 0%,#1f2265 100%); /* Opera 11.10+ */
+                                      background: -ms-linear-gradient(top,  #c5d0d8 0%,#1f2265 100%); /* IE10+ */
+                                      background: linear-gradient(top,  #c5d0d8 0%,#1f2265 100%); /* W3C */
+                                      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5d0d8', endColorstr='#1f2265',GradientType=0 ); /* IE6-9 */
+                                      } 
+ 
