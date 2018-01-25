@@ -1,0 +1,12 @@
+To adjust an image inside its container no matter the width or the size of it,
+use max-width and max-height:
+      
+.product_cover img      {display:inline-block ;margin: auto; 
+
+max-height: 500px; 
+max-width: 500px;
+
+}
+
+If the image is wider than 500px it will be readjusted to a width of 500px
+If the image is higher than 500px it will be readjusted to a height of 500px
