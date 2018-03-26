@@ -1,0 +1,9 @@
+<style>
+
+.card                         { float: left;}
+
+.wrap                         { width: 24em; margin: .5em; display: table; vertical-align: middle; height: 24em; text-align: center;}
+.wrap > div                   { display: table-cell; vertical-align: middle; min-height: 24em; }
+.wrap a                       { font-size: 2.6em; text-decoration: none; color:#A04710;}
+
+</style>
