@@ -1,0 +1,16 @@
+.slide-hidden                       {animation: slide-hidden 0.5s none;-webkit-animation: slide-hidden 0.5s none;}
+@keyframes slide-hidden             {100% {transform: translateX(-110%) translateY(0%);}}
+@-webkit-keyframes slide-hidden     {100% {-webkit-transform: translateX(-110%) translateY(0%);}}
+@-ms-keyframes slide-hidden         {100% {-ms-transform: translateX(-110%) translateY(0%);}}
+
+
+.slide-in                           {animation: slide-in 0.5s forwards;-webkit-animation: slide-in 0.5s forwards;}
+@keyframes slide-in                 {0% {transform: translateX(0%) translateY(0%);} 100% { transform: translateX(-110%) translateY(0%);}}
+@-webkit-keyframes slide-in         {0% {-webkit-transform: translateX(0%) translateY(0%);} 100% {-webkit-transform: translateX(-110%) translateY(0%);}}
+@-ms-keyframes slide-in             {0% {-ms-transform: translateX(0%) translateY(0%);} 100% {-ms-transform: translateX(-110%) translateY(0%);}}
+
+
+.slide-out                          {animation: slide-out 0.5s forwards;-webkit-animation: slide-out 0.5s forwards;}
+@keyframes slide-out                {0% {transform: translateX(-110%) translateY(0%);} 100% {transform: translateX(0%) translateY(0%);}}
+@-webkit-keyframes slide-out        {0% {-webkit-transform: translateX(-110%) translateY(0%);} 100% {-webkit-transform: translateX(0%) translateY(0%);}}
+@-ms-keyframes slide-out            {0% {-ms-transform: translateX(-110%) translateY(0%);} 100% {-ms-transform: translateX(0%) translateY(0%);}}
